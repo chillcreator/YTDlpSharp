@@ -1,4 +1,4 @@
-namespace YTDlpSharp
+﻿namespace YTDlpSharp
 {
     internal static class Program
     {
