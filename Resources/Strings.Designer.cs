@@ -97,11 +97,65 @@ namespace YTDlpSharp.Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Download complete!.
+        /// </summary>
+        internal static string Log_DownloadComplete {
+            get {
+                return ResourceManager.GetString("Log_DownloadComplete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Download failed.
+        /// </summary>
+        internal static string Log_DownloadFailed {
+            get {
+                return ResourceManager.GetString("Log_DownloadFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Error:.
+        /// </summary>
+        internal static string Log_ErrorPrefix {
+            get {
+                return ResourceManager.GetString("Log_ErrorPrefix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Starting download....
+        /// </summary>
+        internal static string Log_StartingDownload {
+            get {
+                return ResourceManager.GetString("Log_StartingDownload", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Paste video URL here....
         /// </summary>
         internal static string UrlTextBox_PlaceholderText {
             get {
                 return ResourceManager.GetString("UrlTextBox_PlaceholderText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Please select a download folder.
+        /// </summary>
+        internal static string Validation_FolderRequired {
+            get {
+                return ResourceManager.GetString("Validation_FolderRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Please enter a video URL.
+        /// </summary>
+        internal static string Validation_UrlRequired {
+            get {
+                return ResourceManager.GetString("Validation_UrlRequired", resourceCulture);
             }
         }
     }

@@ -129,7 +129,25 @@
   <data name="FolderTextBox_PlaceholderText" xml:space="preserve">
     <value>Выберите папку для загрузки...</value>
   </data>
+  <data name="Log_DownloadComplete" xml:space="preserve">
+    <value>Загрузка завершена!</value>
+  </data>
+  <data name="Log_ErrorPrefix" xml:space="preserve">
+    <value>Ошибка:</value>
+  </data>
+  <data name="Log_StartingDownload" xml:space="preserve">
+    <value>Начинается загрузка...</value>
+  </data>
+  <data name="Log_DownloadFailed" xml:space="preserve">
+    <value>Загрузка не удалась</value>
+  </data>
   <data name="UrlTextBox_PlaceholderText" xml:space="preserve">
     <value>Вставьте ссылку на видео...</value>
+  </data>
+  <data name="Validation_FolderRequired" xml:space="preserve">
+    <value>Выберите папку для загрузки</value>
+  </data>
+  <data name="Validation_UrlRequired" xml:space="preserve">
+    <value>Введите URL видео</value>
   </data>
 </root>

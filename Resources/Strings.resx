@@ -133,8 +133,32 @@
     <value>Select download folder...</value>
     <comment>Placeholder for download path textbox</comment>
   </data>
+  <data name="Log_DownloadComplete" xml:space="preserve">
+    <value>Download complete!</value>
+    <comment>Log message when download finishes successfully</comment>
+  </data>
+  <data name="Log_ErrorPrefix" xml:space="preserve">
+    <value>Error:</value>
+    <comment>Prefix for error messages in log</comment>
+  </data>
+  <data name="Log_StartingDownload" xml:space="preserve">
+    <value>Starting download...</value>
+    <comment>Log message when download begins</comment>
+  </data>
+  <data name="Log_DownloadFailed" xml:space="preserve">
+    <value>Download failed</value>
+    <comment>Log message when download fails</comment>
+  </data>
   <data name="UrlTextBox_PlaceholderText" xml:space="preserve">
     <value>Paste video URL here...</value>
     <comment>Placeholder for main URL input field</comment>
+  </data>
+  <data name="Validation_FolderRequired" xml:space="preserve">
+    <value>Please select a download folder</value>
+    <comment>Error message when folder path is empty</comment>
+  </data>
+  <data name="Validation_UrlRequired" xml:space="preserve">
+    <value>Please enter a video URL</value>
+    <comment>Error message when URL is empty</comment>
   </data>
 </root>
