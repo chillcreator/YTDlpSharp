@@ -28,12 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            urlTextBox = new TextBox();
+            SuspendLayout();
+            // 
+            // urlTextBox
+            // 
+            urlTextBox.Location = new Point(16, 16);
+            urlTextBox.Name = "urlTextBox";
+            urlTextBox.PlaceholderText = "Paste video URL here...";
+            urlTextBox.Size = new Size(772, 27);
+            urlTextBox.TabIndex = 0;
+            urlTextBox.TextChanged += textBox1_TextChanged;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(urlTextBox);
+            Name = "Form1";
             Text = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private TextBox urlTextBox;
     }
 }
