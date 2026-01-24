@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DownloadButton_Text" xml:space="preserve">
+    <value>Download</value>
+    <comment>Text for the main download button</comment>
+  </data>
   <data name="UrlTextBox_PlaceholderText" xml:space="preserve">
     <value>Paste video URL here...</value>
     <comment>Placeholder for main URL input</comment>

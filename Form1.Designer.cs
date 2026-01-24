@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             urlTextBox = new TextBox();
+            downloadButton = new Button();
             SuspendLayout();
             // 
             // urlTextBox
@@ -40,11 +41,21 @@
             urlTextBox.TabIndex = 0;
             urlTextBox.TextChanged += textBox1_TextChanged;
             // 
+            // downloadButton
+            // 
+            downloadButton.Location = new Point(16, 69);
+            downloadButton.Name = "downloadButton";
+            downloadButton.Size = new Size(139, 29);
+            downloadButton.TabIndex = 1;
+            downloadButton.Text = "Download";
+            downloadButton.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(downloadButton);
             Controls.Add(urlTextBox);
             Name = "Form1";
             Text = "Form1";
@@ -55,5 +66,6 @@
         #endregion
 
         private TextBox urlTextBox;
+        private Button downloadButton;
     }
 }

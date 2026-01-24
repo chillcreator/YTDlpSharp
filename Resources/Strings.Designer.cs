@@ -61,6 +61,15 @@ namespace YTDlpSharp.Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Download.
+        /// </summary>
+        internal static string DownloadButton_Text {
+            get {
+                return ResourceManager.GetString("DownloadButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Paste video URL here....
         /// </summary>
         internal static string UrlTextBox_PlaceholderText {
