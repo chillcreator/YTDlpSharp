@@ -69,6 +69,7 @@
             browseButton.TabIndex = 3;
             browseButton.Text = "Browse...";
             browseButton.UseVisualStyleBackColor = true;
+            browseButton.Click += browseButton_Click;
             // 
             // logTextBox
             // 

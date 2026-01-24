@@ -125,6 +125,10 @@
     <value>Download</value>
     <comment>Text for the main download button</comment>
   </data>
+  <data name="FolderDialog_Title" xml:space="preserve">
+    <value>Select download folder</value>
+    <comment>Title for the folder selection dialog</comment>
+  </data>
   <data name="FolderTextBox_PlaceholderText" xml:space="preserve">
     <value>Select download folder...</value>
     <comment>Placeholder for download path textbox</comment>

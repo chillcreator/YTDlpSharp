@@ -79,6 +79,15 @@ namespace YTDlpSharp.Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Select download folder.
+        /// </summary>
+        internal static string FolderDialog_Title {
+            get {
+                return ResourceManager.GetString("FolderDialog_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Select download folder....
         /// </summary>
         internal static string FolderTextBox_PlaceholderText {
