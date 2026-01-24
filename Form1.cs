@@ -23,6 +23,19 @@ namespace YTDlpSharp
 
         }
 
+        private void AppendLog(string message)
+        {
+            if (logTextBox.InvokeRequired)
+            {
+                logTextBox.Invoke(new Action<string>(AppendLog), message);
+            }
+            else
+            {
+                logTextBox.AppendText(message + Environment.NewLine);
+                logTextBox.ScrollToCaret(); // Автопрокрутка
+            }
+        }
+
         private void browseButton_Click(object sender, EventArgs e)
         {
             using (var folderDialog = new FolderBrowserDialog())
@@ -34,6 +47,23 @@ namespace YTDlpSharp
                 {
                     folderTextBox.Text = folderDialog.SelectedPath;
                 }
+            }
+        }
+
+        private async void downloadButton_Click(object sender, EventArgs e)
+        {
+            // Проверка ввода URL
+            if (string.IsNullOrWhiteSpace(urlTextBox.Text))
+            {
+                AppendLog($"{Strings.Log_ErrorPrefix} {Strings.Validation_UrlRequired}");
+                return;
+            }
+
+            // Проверка выбора папки
+            if (string.IsNullOrWhiteSpace(folderTextBox.Text))
+            {
+                AppendLog($"{Strings.Log_ErrorPrefix} {Strings.Validation_FolderRequired}");
+                return;
             }
         }
     }

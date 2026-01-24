@@ -52,6 +52,7 @@
             downloadButton.TabIndex = 1;
             downloadButton.Text = "Download";
             downloadButton.UseVisualStyleBackColor = true;
+            downloadButton.Click += downloadButton_Click;
             // 
             // folderTextBox
             // 
