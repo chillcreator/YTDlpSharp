@@ -61,11 +61,29 @@ namespace YTDlpSharp.Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Browse....
+        /// </summary>
+        internal static string BrowseButton_Text {
+            get {
+                return ResourceManager.GetString("BrowseButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Download.
         /// </summary>
         internal static string DownloadButton_Text {
             get {
                 return ResourceManager.GetString("DownloadButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Select download folder....
+        /// </summary>
+        internal static string FolderTextBox_PlaceholderText {
+            get {
+                return ResourceManager.GetString("FolderTextBox_PlaceholderText", resourceCulture);
             }
         }
         

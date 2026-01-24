@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BrowseButton_Text" xml:space="preserve">
+    <value>Обзор...</value>
+  </data>
   <data name="DownloadButton_Text" xml:space="preserve">
     <value>Скачать</value>
+  </data>
+  <data name="FolderTextBox_PlaceholderText" xml:space="preserve">
+    <value>Выберите папку для загрузки...</value>
   </data>
   <data name="UrlTextBox_PlaceholderText" xml:space="preserve">
     <value>Вставьте ссылку на видео...</value>
