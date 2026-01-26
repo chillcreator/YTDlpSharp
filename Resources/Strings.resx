@@ -161,4 +161,16 @@
     <value>Please enter a video URL</value>
     <comment>Error message when URL is empty</comment>
   </data>
+  <data name="DependencyCheck_YtdlpNotFound" xml:space="preserve">
+    <value>yt-dlp was not found in your system PATH. Please install yt-dlp.</value>
+    <comment>Error shown when yt-dlp is missing</comment>
+  </data>
+  <data name="DependencyCheck_FfmpegNotFound" xml:space="preserve">
+    <value>FFmpeg was not found in your system PATH. Please install FFmpeg.</value>
+    <comment>Error shown when FFmpeg is missing</comment>
+  </data>
+  <data name="DependencyCheck_Title" xml:space="preserve">
+    <value>Missing Dependencies</value>
+    <comment>Title of the error dialog</comment>
+  </data>
 </root>

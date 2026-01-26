@@ -70,6 +70,33 @@ namespace YTDlpSharp.Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на FFmpeg was not found in your system PATH. Please install FFmpeg..
+        /// </summary>
+        internal static string DependencyCheck_FfmpegNotFound {
+            get {
+                return ResourceManager.GetString("DependencyCheck_FfmpegNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Missing Dependencies.
+        /// </summary>
+        internal static string DependencyCheck_Title {
+            get {
+                return ResourceManager.GetString("DependencyCheck_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на yt-dlp was not found in your system PATH. Please install yt-dlp..
+        /// </summary>
+        internal static string DependencyCheck_YtdlpNotFound {
+            get {
+                return ResourceManager.GetString("DependencyCheck_YtdlpNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Download.
         /// </summary>
         internal static string DownloadButton_Text {
