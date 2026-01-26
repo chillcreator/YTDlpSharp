@@ -1,5 +1,7 @@
 ﻿using System.Diagnostics;
 using YTDlpSharp.Resources;
+using System.Collections.Generic; // для List<string>
+using System.Windows.Forms;       // для MessageBox
 namespace YTDlpSharp
 {
     public partial class Form1 : Form
@@ -12,6 +14,9 @@ namespace YTDlpSharp
             downloadButton.Text = Strings.DownloadButton_Text;
             folderTextBox.PlaceholderText = Strings.FolderTextBox_PlaceholderText;
             browseButton.Text = Strings.BrowseButton_Text;
+
+            // Проверка зависимостей при запуске
+            CheckDependencies();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -139,5 +144,63 @@ namespace YTDlpSharp
                 }
             }
         }
+        /// <summary>
+        /// Checks if a command is available in the system PATH.
+        /// </summary>
+        /// <param name="command">The command to check (e.g., "yt-dlp", "ffmpeg").</param>
+        /// <returns>True if the command is found, false otherwise.</returns>
+        private bool IsCommandAvailable(string command)
+        {
+            try
+            {
+                using (Process process = new Process())
+                {
+                    // На Windows используем 'where', на Unix-системах — 'which'
+                    process.StartInfo.FileName = (Environment.OSVersion.Platform == PlatformID.Win32NT) ? "where" : "which";
+                    process.StartInfo.Arguments = command;
+                    process.StartInfo.UseShellExecute = false;
+                    process.StartInfo.RedirectStandardOutput = true;
+                    process.StartInfo.CreateNoWindow = true;
+                    process.Start();
+
+                    string output = process.StandardOutput.ReadToEnd();
+                    process.WaitForExit();
+
+                    // Если вывод не пустой и содержит имя команды — значит, команда найдена
+                    return !string.IsNullOrEmpty(output) && output.Contains(command);
+                }
+            }
+            catch
+            {
+                // Если произошла ошибка (например, команда 'where' недоступна), считаем, что команда не найдена
+                return false;
+            }
+        }
+        /// <summary>
+        /// Checks for required external dependencies (yt-dlp, FFmpeg).
+        /// Shows a warning message if any are missing.
+        /// </summary>
+        private void CheckDependencies()
+        {
+            List<string> missingCommands = new List<string>();
+
+            if (!IsCommandAvailable("yt-dlp"))
+                missingCommands.Add(Strings.DependencyCheck_YtdlpNotFound);
+
+            if (!IsCommandAvailable("ffmpeg"))
+                missingCommands.Add(Strings.DependencyCheck_FfmpegNotFound);
+
+            if (missingCommands.Count > 0)
+            {
+                string message = string.Join(Environment.NewLine + Environment.NewLine, missingCommands);
+                MessageBox.Show(
+                    message,
+                    Strings.DependencyCheck_Title,
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+            }
+        }
+
     }
 }
