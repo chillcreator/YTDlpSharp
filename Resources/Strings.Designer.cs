@@ -124,6 +124,60 @@ namespace YTDlpSharp.Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Format:.
+        /// </summary>
+        internal static string FormatLabel_Text {
+            get {
+                return ResourceManager.GetString("FormatLabel_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Audio only (best).
+        /// </summary>
+        internal static string FormatOption_AudioOnly {
+            get {
+                return ResourceManager.GetString("FormatOption_AudioOnly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Video + audio (best quality).
+        /// </summary>
+        internal static string FormatOption_VideoAudioBest {
+            get {
+                return ResourceManager.GetString("FormatOption_VideoAudioBest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Video only (1080p if available).
+        /// </summary>
+        internal static string FormatOption_VideoOnly1080 {
+            get {
+                return ResourceManager.GetString("FormatOption_VideoOnly1080", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Video only (480p).
+        /// </summary>
+        internal static string FormatOption_VideoOnly480 {
+            get {
+                return ResourceManager.GetString("FormatOption_VideoOnly480", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Video only (720p).
+        /// </summary>
+        internal static string FormatOption_VideoOnly720 {
+            get {
+                return ResourceManager.GetString("FormatOption_VideoOnly720", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Download complete!.
         /// </summary>
         internal static string Log_DownloadComplete {

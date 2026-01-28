@@ -159,4 +159,22 @@
   <data name="DependencyCheck_Title" xml:space="preserve">
     <value>Отсутствуют зависимости</value>
   </data>
+  <data name="FormatOption_VideoAudioBest" xml:space="preserve">
+    <value>Видео + аудио (лучшее качество)</value>
+  </data>
+  <data name="FormatOption_AudioOnly" xml:space="preserve">
+    <value>Только аудио (лучшее)</value>
+  </data>
+  <data name="FormatOption_VideoOnly1080" xml:space="preserve">
+    <value>Только видео (1080p, если есть)</value>
+  </data>
+  <data name="FormatOption_VideoOnly720" xml:space="preserve">
+    <value>Только видео (720p)</value>
+  </data>
+  <data name="FormatOption_VideoOnly480" xml:space="preserve">
+    <value>Только видео (480p)</value>
+  </data>
+  <data name="FormatLabel_Text" xml:space="preserve">
+    <value>Формат:</value>
+  </data>
 </root>

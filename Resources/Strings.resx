@@ -173,4 +173,28 @@
     <value>Missing Dependencies</value>
     <comment>Title of the error dialog</comment>
   </data>
+  <data name="FormatOption_VideoAudioBest" xml:space="preserve">
+    <value>Video + audio (best quality)</value>
+    <comment>Download both video and audio streams in the best available quality</comment>
+  </data>
+  <data name="FormatOption_AudioOnly" xml:space="preserve">
+    <value>Audio only (best)</value>
+    <comment>Download only audio stream in the best available quality</comment>
+  </data>
+  <data name="FormatOption_VideoOnly1080" xml:space="preserve">
+    <value>Video only (1080p if available)</value>
+    <comment>Download only video stream in 1080p resolution if available</comment>
+  </data>
+  <data name="FormatOption_VideoOnly720" xml:space="preserve">
+    <value>Video only (720p)</value>
+    <comment>Download only video stream in 720p resolution</comment>
+  </data>
+  <data name="FormatOption_VideoOnly480" xml:space="preserve">
+    <value>Video only (480p)</value>
+    <comment>Download only video stream in 480p resolution</comment>
+  </data>
+  <data name="FormatLabel_Text" xml:space="preserve">
+    <value>Format:</value>
+    <comment>Label text for the format selection dropdown</comment>
+  </data>
 </root>
