@@ -2,6 +2,7 @@
 using YTDlpSharp.Resources;
 using System.Collections.Generic; // для List<string>
 using System.Windows.Forms;       // для MessageBox
+
 namespace YTDlpSharp
 {
     public partial class MainForm : Form
@@ -9,25 +10,37 @@ namespace YTDlpSharp
         public MainForm()
         {
             InitializeComponent();
+
             // Load localized strings for UI elements
             urlTextBox.PlaceholderText = Strings.UrlTextBox_PlaceholderText;
             downloadButton.Text = Strings.DownloadButton_Text;
             folderTextBox.PlaceholderText = Strings.FolderTextBox_PlaceholderText;
             browseButton.Text = Strings.BrowseButton_Text;
 
+            // Загрузка локализованных строк для выбора формата
+            formatLabel.Text = Strings.FormatLabel_Text;
+
+            // Заполнение ComboBox вариантами формата из ресурсов
+            formatComboBox.Items.Clear();
+            formatComboBox.Items.Add(Strings.FormatOption_VideoAudioBest);
+            formatComboBox.Items.Add(Strings.FormatOption_AudioOnly);
+            formatComboBox.Items.Add(Strings.FormatOption_VideoOnly1080);
+            formatComboBox.Items.Add(Strings.FormatOption_VideoOnly720);
+            formatComboBox.Items.Add(Strings.FormatOption_VideoOnly480);
+
+            // Установка выбора по умолчанию
+            if (formatComboBox.Items.Count > 0)
+            {
+                formatComboBox.SelectedIndex = 0;
+            }
+
             // Проверка зависимостей при запуске
             CheckDependencies();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
+        private void textBox1_TextChanged(object sender, EventArgs e) { }
 
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
+        private void textBox1_TextChanged_1(object sender, EventArgs e) { }
 
         private void AppendLog(string message)
         {
@@ -40,6 +53,43 @@ namespace YTDlpSharp
                 logTextBox.AppendText(message + Environment.NewLine);
                 logTextBox.ScrollToCaret(); // Автопрокрутка
             }
+        }
+
+        /// <summary>
+        /// Gets the yt-dlp format arguments based on user selection in ComboBox.
+        /// </summary>
+        /// <returns>Format string for yt-dlp command line arguments.</returns>
+        private string GetFormatArguments()
+        {
+            // Если ComboBox пустой или ничего не выбрано, возвращаем значение по умолчанию
+            if (formatComboBox.Items.Count == 0 || formatComboBox.SelectedIndex == -1)
+                return "-f best"; // значение по умолчанию
+
+            object? selectedItem = formatComboBox.SelectedItem;
+
+            // Проверка на null
+            if (selectedItem is null)
+                return "-f best";
+
+            string? selectedFormat = selectedItem.ToString();
+
+            // Дополнительная проверка на null или пустую строку
+            if (string.IsNullOrEmpty(selectedFormat))
+                return "-f best";
+
+            // Определяем аргументы в зависимости от выбранного варианта
+            if (selectedFormat == Strings.FormatOption_VideoAudioBest)
+                return "-f best";
+            else if (selectedFormat == Strings.FormatOption_AudioOnly)
+                return "-f bestaudio";
+            else if (selectedFormat == Strings.FormatOption_VideoOnly1080)
+                return "-f \"bestvideo[height<=1080]\"";
+            else if (selectedFormat == Strings.FormatOption_VideoOnly720)
+                return "-f \"bestvideo[height<=720]\"";
+            else if (selectedFormat == Strings.FormatOption_VideoOnly480)
+                return "-f \"bestvideo[height<=480]\"";
+            else
+                return "-f best"; // резервный вариант
         }
 
         private void browseButton_Click(object sender, EventArgs e)
@@ -79,8 +129,9 @@ namespace YTDlpSharp
             AppendLog(Strings.Log_StartingDownload);
 
             // Формируем аргументы для yt-dlp
-            // Базовые аргументы: скачать видео со звуком в лучшем качестве, в указанную папку
-            string arguments = $"-o \"{folderTextBox.Text}/%(title)s.%(ext)s\" --merge-output-format mkv --encoding utf-8 --no-windows-filenames \"{urlTextBox.Text}\"";
+            // Базовые аргументы: скачать в указанную папку
+            string formatArgs = GetFormatArguments();
+            string arguments = $"-o \"{folderTextBox.Text}/%(title)s.%(ext)s\" {formatArgs} --merge-output-format mkv --encoding utf-8 --no-windows-filenames \"{urlTextBox.Text}\"";
 
             // Создаём процесс
             using (Process process = new Process())
@@ -144,6 +195,7 @@ namespace YTDlpSharp
                 }
             }
         }
+
         /// <summary>
         /// Checks if a command is available in the system PATH.
         /// </summary>
@@ -176,6 +228,7 @@ namespace YTDlpSharp
                 return false;
             }
         }
+
         /// <summary>
         /// Checks for required external dependencies (yt-dlp, FFmpeg).
         /// Shows a warning message if any are missing.
@@ -202,5 +255,8 @@ namespace YTDlpSharp
             }
         }
 
+        private void MainForm_Load(object sender, EventArgs e) { }
+
+        private void formatComboBox_SelectedIndexChanged(object sender, EventArgs e) { }
     }
 }

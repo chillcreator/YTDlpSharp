@@ -33,11 +33,13 @@
             folderTextBox = new TextBox();
             browseButton = new Button();
             logTextBox = new TextBox();
+            formatComboBox = new ComboBox();
+            formatLabel = new Label();
             SuspendLayout();
             // 
             // urlTextBox
             // 
-            urlTextBox.Location = new Point(16, 16);
+            urlTextBox.Location = new Point(12, 12);
             urlTextBox.Name = "urlTextBox";
             urlTextBox.PlaceholderText = "Paste video URL here...";
             urlTextBox.Size = new Size(772, 27);
@@ -46,7 +48,7 @@
             // 
             // downloadButton
             // 
-            downloadButton.Location = new Point(16, 140);
+            downloadButton.Location = new Point(16, 409);
             downloadButton.Name = "downloadButton";
             downloadButton.Size = new Size(139, 29);
             downloadButton.TabIndex = 1;
@@ -56,7 +58,7 @@
             // 
             // folderTextBox
             // 
-            folderTextBox.Location = new Point(16, 80);
+            folderTextBox.Location = new Point(12, 45);
             folderTextBox.Name = "folderTextBox";
             folderTextBox.PlaceholderText = "Select download folder...";
             folderTextBox.Size = new Size(327, 27);
@@ -64,7 +66,7 @@
             // 
             // browseButton
             // 
-            browseButton.Location = new Point(349, 80);
+            browseButton.Location = new Point(345, 45);
             browseButton.Name = "browseButton";
             browseButton.Size = new Size(113, 29);
             browseButton.TabIndex = 3;
@@ -75,7 +77,7 @@
             // logTextBox
             // 
             logTextBox.Font = new Font("Courier New", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            logTextBox.Location = new Point(16, 203);
+            logTextBox.Location = new Point(16, 168);
             logTextBox.Multiline = true;
             logTextBox.Name = "logTextBox";
             logTextBox.ReadOnly = true;
@@ -84,17 +86,36 @@
             logTextBox.TabIndex = 4;
             logTextBox.TextChanged += textBox1_TextChanged_1;
             // 
-            // Form1
+            // formatComboBox
+            // 
+            formatComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            formatComboBox.FormattingEnabled = true;
+            formatComboBox.Location = new Point(79, 97);
+            formatComboBox.Name = "formatComboBox";
+            formatComboBox.Size = new Size(260, 28);
+            formatComboBox.TabIndex = 5;
+            // 
+            // formatLabel
+            // 
+            formatLabel.AutoSize = true;
+            formatLabel.Location = new Point(12, 100);
+            formatLabel.Name = "formatLabel";
+            formatLabel.Size = new Size(0, 20);
+            formatLabel.TabIndex = 6;
+            // 
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(formatLabel);
+            Controls.Add(formatComboBox);
             Controls.Add(logTextBox);
             Controls.Add(browseButton);
             Controls.Add(folderTextBox);
             Controls.Add(downloadButton);
             Controls.Add(urlTextBox);
-            Name = "Form1";
+            Name = "MainForm";
             Text = "YTDlpSharp";
             ResumeLayout(false);
             PerformLayout();
@@ -107,5 +128,7 @@
         private TextBox folderTextBox;
         private Button browseButton;
         private TextBox logTextBox;
+        private ComboBox formatComboBox;
+        private Label formatLabel;
     }
 }
