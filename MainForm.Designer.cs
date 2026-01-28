@@ -1,6 +1,6 @@
 ﻿namespace YTDlpSharp
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -95,7 +95,7 @@
             Controls.Add(downloadButton);
             Controls.Add(urlTextBox);
             Name = "Form1";
-            Text = "Form1";
+            Text = "YTDlpSharp";
             ResumeLayout(false);
             PerformLayout();
         }
