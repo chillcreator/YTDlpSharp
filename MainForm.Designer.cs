@@ -35,11 +35,14 @@
             logTextBox = new TextBox();
             formatComboBox = new ComboBox();
             formatLabel = new Label();
+            menuStrip1 = new MenuStrip();
+            settingsToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // urlTextBox
             // 
-            urlTextBox.Location = new Point(12, 12);
+            urlTextBox.Location = new Point(12, 58);
             urlTextBox.Name = "urlTextBox";
             urlTextBox.PlaceholderText = "Paste video URL here...";
             urlTextBox.Size = new Size(772, 27);
@@ -58,7 +61,7 @@
             // 
             // folderTextBox
             // 
-            folderTextBox.Location = new Point(12, 45);
+            folderTextBox.Location = new Point(12, 91);
             folderTextBox.Name = "folderTextBox";
             folderTextBox.PlaceholderText = "Select download folder...";
             folderTextBox.Size = new Size(327, 27);
@@ -66,7 +69,7 @@
             // 
             // browseButton
             // 
-            browseButton.Location = new Point(345, 45);
+            browseButton.Location = new Point(345, 91);
             browseButton.Name = "browseButton";
             browseButton.Size = new Size(113, 29);
             browseButton.TabIndex = 3;
@@ -90,7 +93,7 @@
             // 
             formatComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             formatComboBox.FormattingEnabled = true;
-            formatComboBox.Location = new Point(79, 97);
+            formatComboBox.Location = new Point(79, 134);
             formatComboBox.Name = "formatComboBox";
             formatComboBox.Size = new Size(260, 28);
             formatComboBox.TabIndex = 5;
@@ -98,10 +101,27 @@
             // formatLabel
             // 
             formatLabel.AutoSize = true;
-            formatLabel.Location = new Point(12, 100);
+            formatLabel.Location = new Point(12, 134);
             formatLabel.Name = "formatLabel";
             formatLabel.Size = new Size(0, 20);
             formatLabel.TabIndex = 6;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { settingsToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(800, 28);
+            menuStrip1.TabIndex = 7;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // settingsToolStripMenuItem
+            // 
+            settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            settingsToolStripMenuItem.Size = new Size(76, 24);
+            settingsToolStripMenuItem.Text = "&Settings";
+            settingsToolStripMenuItem.Click += settingsToolStripMenuItem_Click;
             // 
             // MainForm
             // 
@@ -115,8 +135,12 @@
             Controls.Add(folderTextBox);
             Controls.Add(downloadButton);
             Controls.Add(urlTextBox);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
             Name = "MainForm";
             Text = "YTDlpSharp";
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -130,5 +154,7 @@
         private TextBox logTextBox;
         private ComboBox formatComboBox;
         private Label formatLabel;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem settingsToolStripMenuItem;
     }
 }

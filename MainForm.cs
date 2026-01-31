@@ -258,5 +258,32 @@ namespace YTDlpSharp
         private void MainForm_Load(object sender, EventArgs e) { }
 
         private void formatComboBox_SelectedIndexChanged(object sender, EventArgs e) { }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Создаем экземпляр формы настроек
+            SettingsForm settingsForm = new SettingsForm();
+
+            // Устанавливаем владельца формы (чтобы оставаться поверх MainForm)
+            settingsForm.Owner = this;
+
+            // Показываем форму как диалоговое окно (модальное)
+            DialogResult result = settingsForm.ShowDialog();
+
+            // Если нужно обработать результат после закрытия формы
+            // Например, если настройки были сохранены
+            if (result == DialogResult.OK)
+            {
+                // Здесь можно обновить что-то в MainForm
+                // Например, перезагрузить настройки
+                MessageBox.Show("Настройки сохранены!", "Уведомление",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (result == DialogResult.Cancel)
+            {
+                // Пользователь нажал Cancel или закрыл форму
+                // Можно ничего не делать
+            }
+        }
     }
 }

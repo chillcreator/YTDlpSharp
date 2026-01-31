@@ -177,4 +177,43 @@
   <data name="FormatLabel_Text" xml:space="preserve">
     <value>Формат:</value>
   </data>
+  <data name="SettingsForm_Tab_General" xml:space="preserve">
+    <value>Общие</value>
+  </data>
+  <data name="SettingsForm_Tab_Output" xml:space="preserve">
+    <value>Вывод</value>
+  </data>
+  <data name="SettingsForm_Tab_YtDlp" xml:space="preserve">
+    <value>yt-dlp</value>
+  </data>
+  <data name="SettingsForm_Tab_Playlist" xml:space="preserve">
+    <value>Плейлисты</value>
+  </data>
+  <data name="SettingsForm_Tab_Subtitle" xml:space="preserve">
+    <value>Субтитры</value>
+  </data>
+  <data name="SettingsForm_Tab_Network" xml:space="preserve">
+    <value>Сеть</value>
+  </data>
+  <data name="SettingsForm_Tab_PostProcessing" xml:space="preserve">
+    <value>Обработка</value>
+  </data>
+  <data name="SettingsForm_Tab_Advanced" xml:space="preserve">
+    <value>Расширенные</value>
+  </data>
+  <data name="SettingsForm_Tab_Monitor" xml:space="preserve">
+    <value>Мониторинг</value>
+  </data>
+  <data name="SettingsForm_Tab_Integration" xml:space="preserve">
+    <value>Интеграция</value>
+  </data>
+  <data name="SettingsForm_Tab_Other" xml:space="preserve">
+    <value>Прочие</value>
+  </data>
+  <data name="SettingsForm_Tab_Profiles" xml:space="preserve">
+    <value>Профили</value>
+  </data>
+  <data name="SettingsForm_Tab_Scheduler" xml:space="preserve">
+    <value>Планировщик</value>
+  </data>
 </root>

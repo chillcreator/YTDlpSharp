@@ -214,6 +214,123 @@ namespace YTDlpSharp.Resources {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Advanced.
+        /// </summary>
+        internal static string SettingsForm_Tab_Advanced {
+            get {
+                return ResourceManager.GetString("SettingsForm_Tab_Advanced", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на General.
+        /// </summary>
+        internal static string SettingsForm_Tab_General {
+            get {
+                return ResourceManager.GetString("SettingsForm_Tab_General", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Integration.
+        /// </summary>
+        internal static string SettingsForm_Tab_Integration {
+            get {
+                return ResourceManager.GetString("SettingsForm_Tab_Integration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Monitor.
+        /// </summary>
+        internal static string SettingsForm_Tab_Monitor {
+            get {
+                return ResourceManager.GetString("SettingsForm_Tab_Monitor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Network.
+        /// </summary>
+        internal static string SettingsForm_Tab_Network {
+            get {
+                return ResourceManager.GetString("SettingsForm_Tab_Network", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Other.
+        /// </summary>
+        internal static string SettingsForm_Tab_Other {
+            get {
+                return ResourceManager.GetString("SettingsForm_Tab_Other", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Output.
+        /// </summary>
+        internal static string SettingsForm_Tab_Output {
+            get {
+                return ResourceManager.GetString("SettingsForm_Tab_Output", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Playlist.
+        /// </summary>
+        internal static string SettingsForm_Tab_Playlist {
+            get {
+                return ResourceManager.GetString("SettingsForm_Tab_Playlist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Post-processing.
+        /// </summary>
+        internal static string SettingsForm_Tab_PostProcessing {
+            get {
+                return ResourceManager.GetString("SettingsForm_Tab_PostProcessing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Profiles.
+        /// </summary>
+        internal static string SettingsForm_Tab_Profiles {
+            get {
+                return ResourceManager.GetString("SettingsForm_Tab_Profiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Scheduler.
+        /// </summary>
+        internal static string SettingsForm_Tab_Scheduler {
+            get {
+                return ResourceManager.GetString("SettingsForm_Tab_Scheduler", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Subtitle.
+        /// </summary>
+        internal static string SettingsForm_Tab_Subtitle {
+            get {
+                return ResourceManager.GetString("SettingsForm_Tab_Subtitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на yt-dlp.
+        /// </summary>
+        internal static string SettingsForm_Tab_YtDlp {
+            get {
+                return ResourceManager.GetString("SettingsForm_Tab_YtDlp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Paste video URL here....
         /// </summary>
         internal static string UrlTextBox_PlaceholderText {

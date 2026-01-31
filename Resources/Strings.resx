@@ -197,4 +197,56 @@
     <value>Format:</value>
     <comment>Label text for the format selection dropdown</comment>
   </data>
+  <data name="SettingsForm_Tab_General" xml:space="preserve">
+    <value>General</value>
+    <comment>General settings tab</comment>
+  </data>
+  <data name="SettingsForm_Tab_Output" xml:space="preserve">
+    <value>Output</value>
+    <comment>Output and templates tab</comment>
+  </data>
+  <data name="SettingsForm_Tab_YtDlp" xml:space="preserve">
+    <value>yt-dlp</value>
+    <comment>yt-dlp settings tab</comment>
+  </data>
+  <data name="SettingsForm_Tab_Playlist" xml:space="preserve">
+    <value>Playlist</value>
+    <comment>Playlist settings tab</comment>
+  </data>
+  <data name="SettingsForm_Tab_Subtitle" xml:space="preserve">
+    <value>Subtitle</value>
+    <comment>Subtitle settings tab</comment>
+  </data>
+  <data name="SettingsForm_Tab_Network" xml:space="preserve">
+    <value>Network</value>
+    <comment>Network settings tab</comment>
+  </data>
+  <data name="SettingsForm_Tab_PostProcessing" xml:space="preserve">
+    <value>Post-processing</value>
+    <comment>Post-processing settings tab</comment>
+  </data>
+  <data name="SettingsForm_Tab_Advanced" xml:space="preserve">
+    <value>Advanced</value>
+    <comment>Advanced settings tab</comment>
+  </data>
+  <data name="SettingsForm_Tab_Monitor" xml:space="preserve">
+    <value>Monitor</value>
+    <comment>Monitor and logging tab</comment>
+  </data>
+  <data name="SettingsForm_Tab_Integration" xml:space="preserve">
+    <value>Integration</value>
+    <comment>System integration tab</comment>
+  </data>
+  <data name="SettingsForm_Tab_Other" xml:space="preserve">
+    <value>Other</value>
+    <comment>Other settings tab</comment>
+  </data>
+  <data name="SettingsForm_Tab_Profiles" xml:space="preserve">
+    <value>Profiles</value>
+    <comment>Profiles settings tab</comment>
+  </data>
+  <data name="SettingsForm_Tab_Scheduler" xml:space="preserve">
+    <value>Scheduler</value>
+    <comment>Scheduler settings tab</comment>
+  </data>
 </root>
