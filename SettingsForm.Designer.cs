@@ -44,8 +44,8 @@
             tabPageProfiles = new TabPage();
             tabPageScheduler = new TabPage();
             panelButtons = new Panel();
-            buttonSave = new Button();
             buttonCancel = new Button();
+            buttonSave = new Button();
             mainTableLayoutPanel.SuspendLayout();
             tabControlSettings.SuspendLayout();
             panelButtons.SuspendLayout();
@@ -65,7 +65,7 @@
             mainTableLayoutPanel.RowCount = 2;
             mainTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             mainTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
-            mainTableLayoutPanel.Size = new Size(882, 603);
+            mainTableLayoutPanel.Size = new Size(1052, 603);
             mainTableLayoutPanel.TabIndex = 0;
             // 
             // tabControlSettings
@@ -89,7 +89,7 @@
             tabControlSettings.Name = "tabControlSettings";
             tabControlSettings.Padding = new Point(10, 10);
             tabControlSettings.SelectedIndex = 0;
-            tabControlSettings.Size = new Size(872, 543);
+            tabControlSettings.Size = new Size(1042, 543);
             tabControlSettings.TabIndex = 0;
             // 
             // tabPageGeneral
@@ -98,7 +98,7 @@
             tabPageGeneral.Location = new Point(4, 43);
             tabPageGeneral.Name = "tabPageGeneral";
             tabPageGeneral.Padding = new Padding(3);
-            tabPageGeneral.Size = new Size(864, 496);
+            tabPageGeneral.Size = new Size(1034, 496);
             tabPageGeneral.TabIndex = 0;
             tabPageGeneral.Text = "General";
             // 
@@ -220,34 +220,34 @@
             panelButtons.Margin = new Padding(0);
             panelButtons.Name = "panelButtons";
             panelButtons.Padding = new Padding(0, 5, 10, 5);
-            panelButtons.Size = new Size(872, 50);
+            panelButtons.Size = new Size(1042, 50);
             panelButtons.TabIndex = 1;
-            // 
-            // buttonSave
-            // 
-            buttonSave.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonSave.Location = new Point(665, 8);
-            buttonSave.Name = "buttonSave";
-            buttonSave.Size = new Size(94, 29);
-            buttonSave.TabIndex = 0;
-            buttonSave.Text = "Save";
-            buttonSave.UseVisualStyleBackColor = true;
             // 
             // buttonCancel
             // 
             buttonCancel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonCancel.Location = new Point(765, 8);
+            buttonCancel.Location = new Point(935, 8);
             buttonCancel.Name = "buttonCancel";
             buttonCancel.Size = new Size(94, 29);
             buttonCancel.TabIndex = 1;
             buttonCancel.Text = "Cancel";
             buttonCancel.UseVisualStyleBackColor = true;
             // 
+            // buttonSave
+            // 
+            buttonSave.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonSave.Location = new Point(835, 8);
+            buttonSave.Name = "buttonSave";
+            buttonSave.Size = new Size(94, 29);
+            buttonSave.TabIndex = 0;
+            buttonSave.Text = "Save";
+            buttonSave.UseVisualStyleBackColor = true;
+            // 
             // SettingsForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(882, 603);
+            ClientSize = new Size(1052, 603);
             Controls.Add(mainTableLayoutPanel);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
