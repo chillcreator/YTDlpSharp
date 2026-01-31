@@ -1,25 +1,65 @@
-﻿using System.Text.Json.Serialization;
+﻿using System;
 
 namespace YTDlpSharp.Settings
 {
     /// <summary>
-    /// General application settings.
+    /// Общие настройки приложения
     /// </summary>
     public class GeneralSettings
     {
-        [JsonPropertyName("language")]
-        public string Language { get; set; } = "auto"; // "auto", "ru", "en"
+        /// <summary>
+        /// Язык интерфейса: "auto", "en", "ru"
+        /// </summary>
+        public string Language { get; set; } = "auto";
 
-        [JsonPropertyName("download_folder")]
-        public string DownloadFolder { get; set; } = "";
+        /// <summary>
+        /// Папка для загрузок по умолчанию
+        /// </summary>
+        public string DownloadFolder { get; set; } = Environment.GetFolderPath(Environment.SpecialFolder.MyVideos);
 
-        [JsonPropertyName("always_ask_location")]
-        public bool AlwaysAskLocation { get; set; } = false;
+        /// <summary>
+        /// Всегда спрашивать папку перед загрузкой
+        /// </summary>
+        public bool AlwaysAskForFolder { get; set; } = true;
 
-        [JsonPropertyName("auto_paste_url")]
+        /// <summary>
+        /// Автоматически вставлять URL из буфера обмена при открытии
+        /// </summary>
         public bool AutoPasteUrl { get; set; } = true;
 
-        [JsonPropertyName("max_concurrent_downloads")]
-        public int MaxConcurrentDownloads { get; set; } = 1; // Default: 1 (no multi-download yet)
+        /// <summary>
+        /// Использовать темную тему интерфейса
+        /// </summary>
+        public bool UseDarkTheme { get; set; } = false;
+
+        /// <summary>
+        /// Проверять обновления при запуске
+        /// </summary>
+        public bool CheckForUpdates { get; set; } = true;
+
+        /// <summary>
+        /// Запускать приложение при старте Windows
+        /// </summary>
+        public bool RunAtWindowsStartup { get; set; } = false;
+
+        /// <summary>
+        /// Минимизировать в системный трей вместо закрытия
+        /// </summary>
+        public bool MinimizeToTray { get; set; } = true;
+
+        /// <summary>
+        /// Показывать уведомления в системном трее
+        /// </summary>
+        public bool ShowTrayNotifications { get; set; } = true;
+
+        /// <summary>
+        /// Подтверждать перед удалением загрузок
+        /// </summary>
+        public bool ConfirmBeforeDeleting { get; set; } = true;
+
+        /// <summary>
+        /// Конструктор по умолчанию
+        /// </summary>
+        public GeneralSettings() { }
     }
 }
